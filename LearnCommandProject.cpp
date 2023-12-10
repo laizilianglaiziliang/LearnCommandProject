@@ -22,6 +22,8 @@ int main()
 	std::shared_ptr<SeekCommand<int>> seekCommand(new SeekCommand<int>(receiver_Array, 1));
 	int* val= (int*)(commandMgr.executeOther(seekCommand));
 	receiver_Array->display();
+	delete val;
+	val = nullptr;
 
 	std::shared_ptr<DelCommand<int>> delCommand(new DelCommand(receiver_Array, 1));
 	commandMgr.execute(delCommand);

@@ -5,8 +5,8 @@ class Command;
 class CommandMgr
 {
 private:
-	std::stack<std::shared_ptr<Command>> m_stkUndo;
-	std::stack<std::shared_ptr<Command>> m_stkRedo;
+	std::stack<std::shared_ptr<Command>> m_stkUndo;//undoջ
+	std::stack<std::shared_ptr<Command>> m_stkRedo;//redoջ
 public:
 	CommandMgr();
 	~CommandMgr();
